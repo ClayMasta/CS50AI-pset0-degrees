@@ -101,15 +101,13 @@ def shortest_path(source, target):
 
     frontier = QueueFrontier()
 
-
     start = Node(source, None, None)
     frontier.add(start)
 
     while True:
 
         if frontier.empty():
-            print("Path does not exist")
-            break
+            return None
 
         node = frontier.remove()
         num_explored += 1
